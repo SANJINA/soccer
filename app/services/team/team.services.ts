@@ -6,28 +6,29 @@ import { Observable } from 'rxjs/Rx';
 import { Config } from '../config';
 
 @Injectable()
-export class CompetitionsService {
+export class TeamService {
   private apiToken: string;
   private url: string;
-  private season: string;
+  private teamId: number;
 
   constructor(private _http: Http) {
     this.apiToken = Config.FOOTBALL_DATA_APITOKEN;
-    this.season = '2016';
-    this.url = Config.FOOTBALL_DATA_BASEURL + '/competitions/?season=' + this.season;
+    this.url = Config.FOOTBALL_DATA_BASEURL + '/teams/';
     //console.log('CompetitionsService Initialized...' + this.url);
   }
 
-  getCompetitions() {
-    //console.log('competitions service url: ' + this.url);
+  getTeam(teamId: number) {
+    this.teamId = teamId;
 
     let headers = new Headers({ 'Accept': 'application/json' });
     headers.append('X-Auth-Token', this.apiToken);
 
     let options = new RequestOptions({ headers: headers });
 
+    console.log('url for team service ' + this.url + this.teamId);
+
     return this._http
-      .get(this.url, options)
+      .get(this.url + this.teamId, options)
       .map((response: Response) => response.json())
       //.do(data => console.log('All: ' +  JSON.stringify(data)))
       .catch(this.handleError);

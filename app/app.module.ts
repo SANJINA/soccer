@@ -4,7 +4,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 
-import { SoccerComponent } from './components/competitions/competitions.component';
+import { CompetitionsComponent } from './components/competitions/competitions.component';
+import { FavoriteTeamsComponent } from './components/favorite_teams/favorite_teams.component';
 
 import { QuoteComponent } from './components/shared/quote/quote.component';
 
@@ -19,10 +20,11 @@ import { FooterComponent } from './components/shared/footer/footer.component';
   ],
   declarations: [
     AppComponent,
-    SoccerComponent,
+    CompetitionsComponent,
     QuoteComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FavoriteTeamsComponent
   ],
   bootstrap:    [ AppComponent ],
   providers: [],

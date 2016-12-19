@@ -3,14 +3,14 @@ import { Http, Jsonp, Response } from '@angular/http';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Rx';
 
+import { Config } from '../config';
+
 @Injectable()
 export class QuoteService {
-  private apikey: string;
   private quoteUrl: string;
 
   constructor(private _jsonp: Jsonp, private _http: Http) {
-    this.apikey = '';
-    this.quoteUrl = 'http://api.forismatic.com/api/1.0/';
+    this.quoteUrl = Config.QUOTE_BASEURL;
     //console.log('QuoteServe Initialized...');
   }
 

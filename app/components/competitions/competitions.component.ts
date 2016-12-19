@@ -7,7 +7,7 @@ import { CompetitionsService } from '../../services/competitions/competitions.se
   selector: 'competitions',
   templateUrl: 'competitions.component.html',
 })
-export class SoccerComponent implements OnInit {
+export class CompetitionsComponent implements OnInit {
   competitions: any[];
 
   constructor(private _competitionsService: CompetitionsService) {
@@ -15,9 +15,8 @@ export class SoccerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._competitionsService.getQuote().subscribe(res => {
-      console.log('What we got from service', res);
-      //this.quote = res.quoteText;
+    this._competitionsService.getCompetitions().subscribe(res => {
+      //console.log('What we got from competitions service', res);
     });
   }
 }
