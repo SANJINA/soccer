@@ -13,13 +13,15 @@ blockquote{
   text-align: justify;
 
   /*Borders - (Optional)*/
-  border-left: 15px solid #c76c0c;
-  border-right: 2px solid #c76c0c;
+  border-left: 15px solid lightgray;
+  border-right: 2px solid lightgray;
 
   /*Box Shadow - (Optional)*/
   -moz-box-shadow: 2px 2px 15px #ccc;
   -webkit-box-shadow: 2px 2px 15px #ccc;
   box-shadow: 2px 2px 15px #ccc;
+
+  margin: 0px;
 }
 
 blockquote::before{

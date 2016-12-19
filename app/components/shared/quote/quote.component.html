@@ -1,7 +1,7 @@
 <blockquote cite="http://forismatic.com/en/api/" *ngIf="quote" (mouseover)="showNewQuoteBtn()" (mouseleave)="hideNewQuoteBtn()">
   <p>{{quote}}</p>
-  <footer *ngIf="quoteAuthor">
-    {{quoteAuthor}}
+  <footer>
+    <span  *ngIf="quoteAuthor">{{quoteAuthor}}</span>
     <button class="btn btn-default pull-right" (click)="getNewQuote()" id="newQuoteBtn" *ngIf="showNewQuoteButton">New Quote</button>
   </footer>
 </blockquote>

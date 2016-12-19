@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Jsonp, Response, Headers, RequestOptions } from '@angular/http';
+import { Http, Jsonp, Response } from '@angular/http';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Rx';
 
@@ -21,21 +21,6 @@ export class QuoteService {
       .map(res => res.json())
       //.do(data => console.log('All: ' +  JSON.stringify(data)))
       .catch(this.handleError);
-
-    /*
-    return this._http
-      .get(this.quoteUrl + '?callback=JSONP_CALLBACK&method=getQuote&format=jsonp&jsonp=parseQuote&lang=en')
-      .map((response: Response) => response.json)
-      .do(data => console.log('All: ' +  JSON.stringify(data)))
-      .catch(this.handleError);
-      */
-
-      /*
-    return this._http.post(this.quoteUrl, 'method=getQuote&format=jsonp&lang=en')
-      .map((response: Response) => response.json)
-      .do(data => console.log('All: ' +  JSON.stringify(data)))
-      .catch(this.handleError);
-      */
   }
 
   private handleError (error: Response) {

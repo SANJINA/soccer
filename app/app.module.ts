@@ -4,7 +4,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 
-import { SoccerComponent } from './components/soccer/soccer.component';
+import { SoccerComponent } from './components/competitions/competitions.component';
 
 import { QuoteComponent } from './components/shared/quote/quote.component';
 
