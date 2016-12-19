@@ -57,3 +57,7 @@ blockquote a:hover{
 blockquote em{
   font-style: italic;
 }
+
+#newQuoteBtn {
+  padding: 5px;
+}
