@@ -1,1 +1,7 @@
 Favorite Teams
+<div>
+  <span class="col-md-4" *ngFor="let team of teamsInfo">
+    {{team.name}}
+    <img [attr.src]="team.crestUrl" class="img-responsive img-thumbnail" />
+  </span>
+</div>

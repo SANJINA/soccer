@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import 'rxjs/Rx';
+//import 'rxjs/Rx';
 import { Observable } from 'rxjs/Rx';
 
 import { Config } from '../config';
@@ -25,7 +25,7 @@ export class TeamService {
 
     let options = new RequestOptions({ headers: headers });
 
-    console.log('url for team service ' + this.url + this.teamId);
+    //console.log('url for team service ' + this.url + this.teamId);
 
     return this._http
       .get(this.url + this.teamId, options)
