@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+import { routing } from './app.routing';
+
 import { AppComponent }  from './app.component';
 
 import { CompetitionsComponent } from './components/competitions/competitions.component';
@@ -12,11 +14,14 @@ import { QuoteComponent } from './components/shared/quote/quote.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
+import { PageNotFoundComponent } from './components/shared/pageNotFound/pageNotFound.component';
+
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    routing
   ],
   declarations: [
     AppComponent,
@@ -24,7 +29,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     QuoteComponent,
     HeaderComponent,
     FooterComponent,
-    FavoriteTeamsComponent
+    FavoriteTeamsComponent,
+    PageNotFoundComponent
   ],
   bootstrap:    [ AppComponent ],
   providers: [],

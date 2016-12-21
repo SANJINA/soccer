@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: 'header.component.html',
   styles: ['.navbar { margin-bottom: 0; }'],
 })
-export class HeaderComponent  {}
+export class HeaderComponent {}
