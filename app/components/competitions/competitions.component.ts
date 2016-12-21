@@ -16,7 +16,7 @@ export class CompetitionsComponent implements OnInit {
 
   ngOnInit(): void {
     this._competitionsService.getCompetitions().subscribe(res => {
-      console.log('What we got from competitions service', res);
+      //console.log('What we got from competitions service', res);
       this.competitions = res;
     });
   }

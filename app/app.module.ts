@@ -8,6 +8,7 @@ import { AppComponent }  from './app.component';
 
 import { CompetitionsComponent } from './components/competitions/competitions.component';
 import { FavoriteTeamsComponent } from './components/favorite_teams/favorite_teams.component';
+import { LeagueComponent } from './components/league/league.component';
 
 import { QuoteComponent } from './components/shared/quote/quote.component';
 
@@ -30,6 +31,7 @@ import { PageNotFoundComponent } from './components/shared/pageNotFound/pageNotF
     HeaderComponent,
     FooterComponent,
     FavoriteTeamsComponent,
+    LeagueComponent,
     PageNotFoundComponent
   ],
   bootstrap:    [ AppComponent ],

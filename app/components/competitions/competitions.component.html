@@ -1,6 +1,14 @@
 <h2>Competitions</h2>
 <div>
-  <span class="col-md-4" *ngFor="let competition of competitions">
-    {{competition.caption}}
+  <span class="col-md-6" *ngFor="let competition of competitions">
+    <h3><a [routerLink]="['/competitions/', competition.id]">{{competition.caption}}</a></h3>
+    Current Match Day: {{competition.currentMatchday}}
+    <br>
+    Number of Match Days: {{competition.numberofMatchdays}}
+    <br>
+    Number of Teams: {{competition.numberOfTeams}}
+    <br>
+    Number of Games: {{competition.numberOfGames}}
+    <hr />
   </span>
 </div>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FavoriteTeamsComponent } from './components/favorite_teams/favorite_teams.component';
 import { CompetitionsComponent } from './components/competitions/competitions.component';
 import { PageNotFoundComponent } from './components/shared/pageNotFound/pageNotFound.component';
+import { LeagueComponent } from './components/league/league.component';
 
 const APP_ROUTES: Routes = [
   {
@@ -12,6 +13,10 @@ const APP_ROUTES: Routes = [
   {
     path: 'competitions',
     component: CompetitionsComponent
+  },
+  {
+    path: 'competitions/:id',
+    component: LeagueComponent
   },
   {
     path: '',

@@ -11,12 +11,9 @@ export class QuoteService {
 
   constructor(private _jsonp: Jsonp, private _http: Http) {
     this.quoteUrl = Config.QUOTE_BASEURL;
-    //console.log('QuoteServe Initialized...');
   }
 
   getQuote() {
-    //console.log('quote service url: ' + this.quoteUrl);
-
     return this._jsonp.get(this.quoteUrl + '?method=getQuote&format=jsonp&jsonp=JSONP_CALLBACK&lang=en')
       .map(res => res.json())
       //.do(data => console.log('All: ' +  JSON.stringify(data)))
