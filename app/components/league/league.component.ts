@@ -9,6 +9,7 @@ import { LeagueService } from '../../services/league/league.service';
   templateUrl: 'league.component.html'
 })
 export class LeagueComponent implements OnInit {
+  leagueName: string;
   leagueId: number;
   standing: any[];
 
@@ -19,8 +20,9 @@ export class LeagueComponent implements OnInit {
 
   ngOnInit(): void {
     this._leagueService.getLeagueTable(this.leagueId).subscribe(res => {
-      console.log('What we got from league service', res);
+      //console.log('What we got from league service', res);
       this.standing = res.standing;
+      this.leagueName = res.leagueCaption;
     });
   }
 }

@@ -1,4 +1,31 @@
-This is league component
-<div *ngFor="let team of standing">
-  {{team.teamName}}
-</div>
+<h3>{{leagueName}}</h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>Position</td>
+      <td>Team</td>
+      <td>Points</td>
+      <td>Played</td>
+      <td>Wins</td>
+      <td>Draws</td>
+      <td>Loses</td>
+      <td>GF</td>
+      <td>GC</td>
+      <td>GD</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of standing">
+      <td>{{team.position}}</td>
+      <td>{{team.teamName}}</td>
+      <td>{{team.points}}</td>
+      <td>{{team.playedGames}}</td>
+      <td>{{team.wins}}</td>
+      <td>{{team.draws}}</td>
+      <td>{{team.losses}}</td>
+      <td>{{team.goals}}</td>
+      <td>{{team.goalsAgainst}}</td>
+      <td>{{team.goalDifference}}</td>
+    </tr>
+  </tbody>
+</table>
