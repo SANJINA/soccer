@@ -23,6 +23,14 @@ export class LeagueComponent implements OnInit {
       //console.log('What we got from league service', res);
       this.standing = res.standing;
       this.leagueName = res.leagueCaption;
+
+      //add team id to each team in standing
+      this.standing.forEach(team => {
+      let ind: number = (team['_links'].team.href).lastIndexOf('/');
+        let teamId: string = (team['_links'].team.href).slice(ind + 1);
+        //console.log('The team id is ' + teamId);
+        team.teamId = teamId;
+      });
     });
   }
 }

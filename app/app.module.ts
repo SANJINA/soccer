@@ -9,6 +9,7 @@ import { AppComponent }  from './app.component';
 import { CompetitionsComponent } from './components/competitions/competitions.component';
 import { FavoriteTeamsComponent } from './components/favorite_teams/favorite_teams.component';
 import { LeagueComponent } from './components/league/league.component';
+import { TeamComponent } from './components/team/team.component';
 
 import { QuoteComponent } from './components/shared/quote/quote.component';
 
@@ -32,7 +33,8 @@ import { PageNotFoundComponent } from './components/shared/pageNotFound/pageNotF
     FooterComponent,
     FavoriteTeamsComponent,
     LeagueComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TeamComponent
   ],
   bootstrap:    [ AppComponent ],
   providers: [],

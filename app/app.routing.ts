@@ -4,6 +4,7 @@ import { FavoriteTeamsComponent } from './components/favorite_teams/favorite_tea
 import { CompetitionsComponent } from './components/competitions/competitions.component';
 import { PageNotFoundComponent } from './components/shared/pageNotFound/pageNotFound.component';
 import { LeagueComponent } from './components/league/league.component';
+import { TeamComponent } from './components/team/team.component';
 
 const APP_ROUTES: Routes = [
   {
@@ -17,6 +18,15 @@ const APP_ROUTES: Routes = [
   {
     path: 'competitions/:id',
     component: LeagueComponent
+  },
+  {
+    path: 'team',
+    redirectTo: 'favoriteTeams',
+    pathMatch: 'full'
+  },
+  {
+    path: 'team/:id',
+    component: TeamComponent
   },
   {
     path: '',
