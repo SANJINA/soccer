@@ -7,7 +7,7 @@ import { Config } from '../config';
 
 @Injectable()
 export class QuoteService {
-  private quoteUrl: string;
+  private quoteUrl: string; //Url for the quote.
 
   constructor(private _jsonp: Jsonp, private _http: Http) {
     this.quoteUrl = Config.QUOTE_BASEURL;
